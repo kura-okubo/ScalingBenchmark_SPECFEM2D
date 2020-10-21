@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
 nprocs=[1, 2, 4, 8, 16, 32, 64, 128] # vector of trial number of processors
-cputime=[3800, 1920, 1, 1, 1, 1, 1, 1] # cpu time [s] 
+cputime=[3800, 1922.41003, 1, 1, 1, 1, 1, 1] # cpu time [s] 
 
 fig, ax = plt.subplots(1, 1, figsize=(8, 6), dpi=80)
 
