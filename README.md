@@ -1,4 +1,4 @@
-# Note of installation and test of SPECFEM2D benchmark
+# Note of installation and scaling test using SPECFEM2D
 ---
 
 
@@ -23,17 +23,19 @@ It worked without any error with macOS Catalina 10.15.7; GNU Fortran (GCC) 8.2.0
 ![plot_example](./fig/forward_image0003000.jpg)
 
 ## How to run the simulation
-1. Go to `specfem2d/EXAMPLES/Benchmark_fullspace/` and set number of processors in `DATA/Par_file`, line 20: `NPROC=1`.
 
-2. Run `sh run_benchmark.sh`.\
+1. Copy the example project `Benchmark_fullspace` into `specfem2d/EXAMPLES/`. You can remove the other examples, but please put it into `EXAMPLE` as the script uses relative paths.
+
+2. Go to `specfem2d/EXAMPLES/Benchmark_fullspace/` and set number of processors in `DATA/Par_file`, line 20: `NPROC=1`.
+
+3. Run `sh run_benchmark.sh`.\
 This shell script conducts the meshing and then computes wave propagation.
 
-
-3. To plot waveform to validate your calculation, go to `specfem2d/EXAMPLES/Benchmark_fullspace/plot_result` and run `python validate_waveform.py 1`, where the number indicates the number of processors used like `OUTPUT_FILE_NP1`.\
+4. To plot waveform to validate your calculation, go to `specfem2d/EXAMPLES/Benchmark_fullspace/plot_result` and run `python validate_waveform.py 1`, where the number indicates the number of processors used like `OUTPUT_FILE_NP1`.\
 NOTE: You need the following python modules: numpy (1.19.1); pandas (1.1.3);scipy (1.5.2). Versions are not strict, but please check it if your module is too old.
 ![validation_result](./fig/validation_result.png)
 
-4. `specfem2d/EXAMPLES/Benchmark_fullspace/plot_result/plot_cputime.py` is a script to plot scalability of parallelization. Please note the number of cores and associated cputime from output (stdout), and add it into the script. You can plot with `python plot_cputime.py`
+5. `specfem2d/EXAMPLES/Benchmark_fullspace/plot_result/plot_cputime.py` is a script to plot scalability of parallelization. Please note the number of cores and associated cputime from output (stdout), and add it into the script. You can plot with `python plot_cputime.py`
 
 ## Scaling of parallelization
 ![benchmark_cputime](./fig/benchmark_cputime.png)
