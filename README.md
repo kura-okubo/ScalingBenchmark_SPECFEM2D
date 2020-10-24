@@ -37,6 +37,3 @@ NOTE: You need the following python modules: numpy (1.19.1); pandas (1.1.3);scip
 ![validation_result](./fig/validation_result.png)
 
 5. `specfem2d/EXAMPLES/Benchmark_fullspace/plot_result/plot_cputime.py` is a script to plot scalability of parallelization. Please note the number of cores and associated cputime from output (stdout), and add it into the script. You can plot with `python plot_cputime.py`
-
-## Scaling of parallelization
-![benchmark_cputime](./fig/benchmark_cputime.png)
