@@ -9,6 +9,7 @@ Following SPECFEM2D manual "Chapter 2"
 2. Go to `specfem2d` directory and type `./configure FC=gfortran CC=gcc MPIFC=mpif90 --with-mpi`. If using ifort, specify with `./configure FC=ifort MPIFC=mpif90 --with-mpi`. \
 __NOTE__: If an error occurs, check `FLAGS_CHECK` in `Makefile` after `./configure ...`.\
 It worked without any error with macOS Catalina 10.15.7; GNU Fortran (GCC) 8.2.0; Apple clang version 12.0.0 (clang-1200.0.32.2); MPICH Version: 3.2.1
+3. Type `make` to compile executable files.
 
 ## Simulation model setup
 - 200km * 200km 2D full space P-SV elastic wave propagation.
